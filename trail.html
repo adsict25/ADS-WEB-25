@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Member Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Card Container */
+        .card {
+            width: 18rem; /* Adjust width of the card */
+            border: 2px solid #ddd; /* Border around the card */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Ensure content doesn't overflow the card */
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Card Image */
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            padding: 10px; /* Space between the image and the card border */
+            background-color: #f8f9fa; /* Light background for the image section */
+        }
+
+        /* Card Body */
+        .card-body {
+            padding: 15px;
+        }
+
+        /* Card Title */
+        .card-title {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+        }
+
+        /* Modal Image Style */
+        .modal-body img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%; /* Makes the image oval */
+            margin-bottom: 20px;
+        }
+
+        /* Bio Text */
+        .bio-text {
+            font-family: 'Times New Roman', serif;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Card Section for Board Members -->
+    <div class="container">
+        <div class="row">
+            <!-- Individual Cards with Modals -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/t1.jpg" class="card-img-top" alt="Jane Doe">
+                    <div class="card-body">
+                        <h5 class="card-title">Jane Doe</h5>
+                        <p class="card-text">Position: Chairperson, Board of Trustees</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#boardMemberModal1">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 1 (Jane Doe) -->
+            <div class="modal fade" id="boardMemberModal1" tabindex="-1" role="dialog" aria-labelledby="boardMemberModalLabel1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="boardMemberModalLabel1">Jane Doe - Chairperson, Board of Trustees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/t1.jpg" class="img-fluid" alt="Jane Doe">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Bio</h5>
+                                    <p class="bio-text">Jane Doe is an experienced leader with over 25 years of service in the nonprofit sector. She holds a Master's degree in Business Administration (MBA) and has worked with various global organizations in leadership roles. She has dedicated her career to promoting sustainable development, social equity, and corporate governance. As the Chairperson of the Board of Trustees at ADS Nyanza, Jane plays an instrumental role in providing strategic guidance and ensuring the organization’s mission aligns with the long-term goals of the community.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/john_smith.jpg" class="card-img-top" alt="John Smith">
+                    <div class="card-body">
+                        <h5 class="card-title">John Smith</h5>
+                        <p class="card-text">Position: Treasurer, Board of Trustees</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#boardMemberModal2">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 2 (John Smith) -->
+            <div class="modal fade" id="boardMemberModal2" tabindex="-1" role="dialog" aria-labelledby="boardMemberModalLabel2" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="boardMemberModalLabel2">John Smith - Treasurer, Board of Trustees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/john_smith.jpg" class="img-fluid" alt="John Smith">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Bio</h5>
+                                    <p class="bio-text">John Smith is an accomplished financial expert with over 30 years of experience in the finance sector. He has worked with various international banks and nonprofit organizations, focusing on financial strategy and investment management. John holds a degree in Finance and Accounting and has a strong background in auditing and financial reporting. As the Treasurer of the Board of Trustees, John is responsible for overseeing the financial health of ADS Nyanza and ensuring that all financial operations are conducted in accordance with best practices and transparency standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/susan_white.jpg" class="card-img-top" alt="Susan White">
+                    <div class="card-body">
+                        <h5 class="card-title">Susan White</h5>
+                        <p class="card-text">Position: Secretary, Board of Trustees</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#boardMemberModal3">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 3 (Susan White) -->
+            <div class="modal fade" id="boardMemberModal3" tabindex="-1" role="dialog" aria-labelledby="boardMemberModalLabel3" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="boardMemberModalLabel3">Susan White - Secretary, Board of Trustees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/susan_white.jpg" class="img-fluid" alt="Susan White">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Bio</h5>
+                                    <p class="bio-text">Susan White is a highly respected secretary with expertise in administration and organizational management. She has worked with multiple nonprofits and governmental organizations over her 20-year career. Susan is known for her attention to detail, excellent communication skills, and ability to manage complex scheduling and documentation tasks. As the Secretary of the Board of Trustees, Susan ensures that all board meetings are well-organized and that accurate records are kept of all proceedings, helping the board to function smoothly and effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/michael_black.jpg" class="card-img-top" alt="Michael Black">
+                    <div class="card-body">
+                        <h5 class="card-title">Michael Black</h5>
+                        <p class="card-text">Position: Director, Board of Trustees</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#boardMemberModal4">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 4 (Michael Black) -->
+            <div class="modal fade" id="boardMemberModal4" tabindex="-1" role="dialog" aria-labelledby="boardMemberModalLabel4" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="boardMemberModalLabel4">Michael Black - Director, Board of Trustees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/michael_black.jpg" class="img-fluid" alt="Michael Black">
+                                </div>
+                                <div class="col-md-8"></div>
+                                    <h5>Bio</h5>
+                                    <p class="bio-text">Michael Black is a passionate advocate for sustainable development and education. He holds a master's degree in Environmental Science and has spent over 15 years working with NGOs focused on rural development and environmental conservation. As a Director on the Board, Michael brings his expertise in program management, environmental sustainability, and community development to help guide ADS Nyanza’s strategic direction. He is dedicated to ensuring that the organization’s activities promote long-term positive impacts on local communities and the environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/emily_green.jpg" class="card-img-top" alt="Emily Green">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Green</h5>
+                        <p class="card-text">Position: Director, Board of Trustees</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#boardMemberModal5">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 5 (Emily Green) -->
+            <div class="modal fade" id="boardMemberModal5" tabindex="-1" role="dialog" aria-labelledby="boardMemberModalLabel5" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="boardMemberModalLabel5">Emily Green - Director, Board of Trustees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/emily_green.jpg" class="img-fluid" alt="Emily Green">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Bio</h5>
+                                    <p class="bio-text">Emily Green is a dedicated advocate for youth empowerment and education, with a background in youth development programs. She holds a Master's degree in Social Work and has worked with several international NGOs focusing on community-driven youth initiatives. As a Director, Emily plays a key role in shaping the organization's vision for youth engagement, ensuring that ADS Nyanza’s programs effectively address the needs of young people and foster their long-term development.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/robert_brown.jpg" class="card-img-top" alt="Robert Brown">
+                    <div class="card-body">
+                        <h5 class="card-title">Robert Brown</h5>
+                        <p class="card-text">Position: Director, Board of Trustees</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#boardMemberModal6">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal 6 (Robert Brown) -->
+            <div class="modal fade" id="boardMemberModal6" tabindex="-1" role="dialog" aria-labelledby="boardMemberModalLabel6" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="boardMemberModalLabel6">Robert Brown - Director, Board of Trustees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/robert_brown.jpg" class="img-fluid" alt="Robert Brown">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Bio</h5>
+                                    <p class="bio-text">Robert Brown has an extensive background in community development and corporate social responsibility. He holds a degree in Public Relations and has led various CSR programs in the private sector. Robert brings strong leadership skills to the Board, with a focus on strategic partnerships, stakeholder engagement, and creating synergies between private and nonprofit sectors to advance ADS Nyanza’s mission. He is passionate about sustainable growth and ensuring that the organization's initiatives create lasting community benefits.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

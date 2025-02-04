@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of your website">
+    <meta name="keywords" content="keywords, for, your, website">
+    <title>ADS Nyanza - Get Involved</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom Navbar Styles */
+        .navbar-custom {
+            background-color: hsl(137, 93%, 42%);
+            padding: 3px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            background-color: #ff8000;
+            border-radius: 5px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 10px;
+            background-color: #f8f9fa;
+            height: 60px;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+            filter: brightness(1.2);
+        }
+
+        /* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 3px 10px;
+            background-color: #f8f9fa;
+            height: 40px;
+            align-items: center;
+        }
+
+        .social-icons i {
+            font-size: 30px;
+            color: hwb(233 4% 30%);
+        }
+
+        /* Celebration Text Styling */
+        .celebration-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: #f8f9fa;
+            font-size: 45px;
+            font-weight: bold;
+            color: #004080;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 2px 2px 4px #aaa;
+            animation: celebration 1s infinite alternate;
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        @keyframes celebration {
+            0% { color: #004080; }
+            100% { color: #ff8000; }
+        }
+
+        /* Second Navbar Styles */
+        .navbar-secondary {
+            background-color: hsl(210, 91%, 30%);
+            padding: 3px 10px;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        .navbar-secondary .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+
+        .navbar-secondary .navbar-nav .nav-link:hover {
+            background-color: #ff8000;
+            border-radius: 5px;
+        }
+
+        /* Photo Carousel Styling */
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        /* Additional Content Styling */
+        .content {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .carousel-cause .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-cause .item img {
+            border-radius: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-cause .item img:hover {
+            transform: scale(1.1);
+        }
+
+        .ftco-gallery .gallery {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ftco-gallery .gallery:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .ftco-gallery .gallery .icon {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ftco-gallery .gallery:hover .icon {
+            opacity: 1;
+        }
+
+        .ftco-gallery .gallery .icon span {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .ftco-gallery .gallery .icon {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #d4edda;
+        }
+
+        .social-icons a {
+            font-size: 10px;
+            width: 20px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%;
+        }
+
+        .social-icons a:hover {
+            color: #28a745;
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .footer-top {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d4edda;
+        }
+
+        .footer-top h5 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-top p, .footer-top ul {
+            margin-bottom: 10px;
+        }
+
+        .footer-top ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-top ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-top ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-top ul li a:hover {
+            color: #d4edda;
+        }
+
+        /* Custom List Item Styles */
+        .custom-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .custom-list li::before {
+            content: "*";
+            position: absolute;
+            left: 0;
+            color: #d4edda;
+            font-weight: bold;
+        }
+
+        /* Cookie Consent Styles */
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 10000;
+        }
+
+        .cookie-consent button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .cookie-consent button.reject {
+            background-color: #dc3545;
+        }
+
+        .cookie-consent button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid">
+            <!-- Left Navigation Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="media_ads.html">Media</a>
+                    </li>
+                </ul>
+                <!-- Right Navigation Menu -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="involve.html">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ess.ads-nyanza.org/">Staff Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Social Media Icons placed below the Navbar -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank">
+            <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://twitter.com/Ads_Nyanza" target="_blank">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/+254 726947044" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="mailto:ads@ads-nyanza.org" target="_blank">
+            <i class="bi bi-envelope-at-fill"></i>
+        </a>
+    </div>
+
+    <!-- Logo placed below the Social Media Icons -->
+    <div class="logo">
+        <img src="images/ads.png" alt="Logo">
+    </div>
+
+    <!-- Celebration Text placed below the Logo -->
+    <div class="celebration-text">
+        Join Us in Celebrating
+        <p>Over 28 years for community Empowerment</p>
+    </div>
+
+    <!-- Second Navbar placed below the Celebration Text -->
+    <nav class="navbar navbar-expand-lg navbar-secondary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSecondary">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="programs.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ecd_ads.html">Early Childhood Development</a></li>
+                            <li><a class="dropdown-item" href="emergency_ads.html">Emergency Response</a></li>
+                            <li><a class="dropdown-item" href="global_fund.html">Global Fund</a></li>
+                            <li><a class="dropdown-item" href="icrp_ads.html">Intergrated Climate Resilience Project</a></li>
+                            <li><a class="dropdown-item" href="pesp_ads.html">Peoples Empowerment and sustainability Project</a></li>
+                            <li><a class="dropdown-item" href="wkpi_ads.html">West Kenya Peace Initiative</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="involve.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="downloads_ads.html">Downloads</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location.html">Location</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <!-- Photo Carousel placed below the Second Navbar -->
+ <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/ads1.jpg" class="d-block w-100" alt="Photo 1" style="height: 450px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="images/tree_planting_pm.jpg" class="d-block w-100" alt="Photo 2" style="height: 600px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="images/ads-image.jpg" class="d-block w-100" alt="Photo 3" style="height: 900px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="images/tree_planting_ed.jpg" class="d-block w-100" alt="Photo 4" style="height: 1200px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="images/staff001.jpg" class="d-block w-100" alt="Photo 5" style="height: 800px; object-fit: cover;">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+    <!-- Cookie Consent Pop-up -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our use of cookies. <a href="privacy-policy.html" style="color: #d4edda;">Learn more</a></p>
+        <button onclick="acceptCookies()">Accept</button>
+        <button class="reject" onclick="rejectCookies()">Reject</button>
+    </div>
+
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        console.log('Navbar, header, and social media icons loaded successfully.');
+
+        // Check if cookies are accepted
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieConsent').style.display = 'block';
+            }
+        }
+
+        // Accept cookies
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
+
+        // Reject cookies
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
+
+        // Check cookie consent on page load
+        window.onload = checkCookieConsent;
+    </script>
+<!--
+
+    <div class="hero-wrap" style="background-image: url('images/involve.jpg');">
+        <div class="overlay"></div>
+        <div class="container text-center text-white">
+            <h1 class="mb-3"> </h1>
+            <p> </p>
+        </div>
+    </div>
+    -->
+
+    <section class="container py-5">
+        <div class="row">
+            <!-- Volunteer with Us Section -->
+            <div class="col-md-6 mb-4">
+                <h2 class="section-heading text-center">Volunteer with Us</h2>
+                <p class="text-center">Join ADS Nyanza and be part of impactful initiatives that empower communities. Your time and skills can make a significant difference.</p>
+                <div class="shadow-sm p-4 rounded bg-light">
+                    <form action="https://formsubmit.co/ads@ads-nyanza.org" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <!-- First Name -->
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name" required>
+                            </div>
+                            <!-- Last Name -->
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Physical Address -->
+                            <div class="col-md-6 mb-3">
+                                <label for="address" class="form-label">Physical Address</label>
+                                <input type="text" id="address" name="address" class="form-control" placeholder="Your Address" required>
+                            </div>
+                            <!-- Phone Number -->
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Primary Phone" required>
+                            </div>
+                        </div>
+                        <!-- Alternate Phone -->
+                        <div class="mb-3">
+                            <label for="altPhone" class="form-label">Alternative Phone Number</label>
+                            <input type="tel" id="altPhone" name="altPhone" class="form-control" placeholder="Alternative Phone">
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <!-- CV Upload -->
+                        <div class="mb-3">
+                            <label for="cv" class="form-label">Upload CV/Portfolio</label>
+                            <input type="file" id="cv" name="cv" class="form-control" accept=".pdf,.doc,.docx" required>
+                        </div>
+                        <!-- Reason for Volunteering -->
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Reason for Volunteering</label>
+                            <textarea id="reason" name="reason" rows="3" class="form-control" placeholder="Why do you want to volunteer?" required></textarea>
+                        </div>
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://ads-nyanza.org/thank-you.html">
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Careers Section -->
+            <div class="col-md-6">
+                <h2 class="section-heading">Careers</h2>
+                <p>We are seeking passionate individuals to join ADS Nyanza. Explore job opportunities below and contribute to our mission of empowering communities.</p>
+                <div class="shadow-sm p-4 rounded bg-light">
+                    <h4 class="mb-3">Current Openings:</h4>
+                    <ul class="list-group list-group-flush">
+                        <!-- Job Listing -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>Program Manager</strong> <br>
+                                <small>Posted: 01-Dec-2024 | Deadline: 15-Jan-2025</small>
+                            </div>
+                            <a href="files/programs_man.pdf" download class="btn btn-primary btn-sm">Download</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>Field Officer</strong> <br>
+                                <small>Posted: 01-Dec-2024 | Deadline: 30-Jan-2025</small>
+                            </div>
+                            <a href="files/programs_man.pdf" download class="btn btn-primary btn-sm">Download</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>IT Specialist</strong> <br>
+                                <small>Posted: 01-Dec-2024 | Deadline: 10-Feb-2025</small>
+                            </div>
+                            <a href="files/programs_man.pdf" download class="btn btn-primary btn-sm">Download</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="container py-5">
+        <div class="row">
+            <!-- Donation Information -->
+            <div class="col-md-6">
+                <h2 class="section-heading">Donate</h2>
+                <p>ADS Nyanza is dedicated to transforming lives and empowering communities through sustainable development initiatives. Your support fuels our mission to promote social welfare, education, and economic empowerment in Nyanza and beyond.</p>
+                <p>Whether you are donating to support ongoing programs like Early Childhood Development or new initiatives such as digital extension agriculture, your generosity allows us to expand our impact and reach more vulnerable communities.</p>
+                <p>For donation inquiries, contact:</p>
+                <ul class="list-unstyled">
+                    <li><strong>Contact Person:</strong>Ads Nyanza</li>
+                    <li><strong>Phone:</strong> +254 726947044</li>
+                    <li><strong>Email:</strong> ads@adsnyanza.org</li>
+                </ul>
+            </div>
+    
+            <!-- Donation Form -->
+            <div class="col-md-6">
+                <div class="shadow-sm p-4 rounded bg-light">
+                    <form action="https://formsubmit.co/ads@ads-nyanza.org" method="POST">
+                        <!-- Donation Amount -->
+                        <div class="form-group mb-3">
+                            <label for="donationAmount" class="form-label">Donation Amount (KES):</label>
+                            <input type="number" class="form-control" id="donationAmount" name="donationAmount" placeholder="Enter amount" required>
+                        </div>
+                        <!-- Payment Options -->
+                        <h4 class="mt-3">Payment Options:</h4>
+                        <div class="payment-section mb-3">
+                            <div class="form-check">
+                                <input type="radio" id="mpesa" name="paymentMethod" value="Mpesa" class="form-check-input" required>
+                                <label for="mpesa" class="form-check-label">Mpesa</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="paypal" name="paymentMethod" value="Paypal" class="form-check-input" required>
+                                <label for="paypal" class="form-check-label">Paypal</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="visa" name="paymentMethod" value="Visa" class="form-check-input" required>
+                                <label for="visa" class="form-check-label">Visa</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="globalpay" name="paymentMethod" value="GlobalPay" class="form-check-input" required>
+                                <label for="globalpay" class="form-check-label">GlobalPay</label>
+                            </div>
+                        </div>
+                        <div class="ssl-secure text-muted">
+                            <small><i class="bi bi-shield-lock-fill"></i> Secured by SSL Encryption</small>
+                        </div>
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://ads-nyanza.org/thank-you.html">
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary mt-3 w-100">Donate Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Footer Section -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<footer>
+    <div class="container py-5 text-white">
+        <!-- Top Section -->
+        <div class="row">
+            <!-- ADS Nyanza Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">ADS Nyanza</h5>
+                <p>St. Peters Church Milimani, Along Omolo Agar Road, Kisumu, Kenya</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+254 726947044</p>
+                <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:ads@ads-nyanza.org" class="text-white">ads@ads-nyanza.org</a></p>
+
+                <h6 class="font-weight-bold">Social Media</h6>
+                <div class="d-flex justify-content-start">
+                    <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank" class="text-white me-2">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank" class="text-white me-2">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/Ads_Nyanza" target="_blank" class="text-white me-2">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank" class="text-white me-2">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.whatsapp.com" target="_blank" class="text-white me-2">
+                        <i class="bi bi-whatsapp"></i>               
+                             </a>
+                </div>
+            </div>
+
+            <!-- Our Work Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">Our Work</h5>
+                <ul class="list-unstyled custom-list">
+                    <li><a href="ecd.html" class="text-white">Early Childhood Development</a></li>
+                    <li><a href="gf.html" class="text-white">Global Fund</a></li>
+                    <li><a href="icrp.html" class="text-white">Intergrated Climate Resilence Project</a></li>
+                    <li><a href="wkpi.html.html" class="text-white">West Kenya Peace Initiative</a></li>
+                    <li><a href="emergency.html" class="text-white">Emergency Responce</a></li>
+                    <li><a href="pesp_ads.html" class="text-white">PESP</a></li>
+
+                </ul>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">About Us</h5>
+                <ul class="list-unstyled custom-list">
+                    <li><a href="about.html" target="_blank" class="text-white">Our Leadership</a></li>
+                    <li><a href="involve.html" target="_blank" class="text-white">Get Involved</a></li>
+                    <li><a href="ads-updates.html" target="_blank" class="text-white">News</a></li>
+                </ul>
+                <h6 class="font-weight-bold">Our Guiding Policies</h6>
+                <ul class="list-unstyled custom-list">
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS HR Policy</a></li>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS PSEAH Policy</a></li>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS ICT Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Access Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">Quick Access</h5>
+                <ul class="list-unstyled custom-list">
+                    <li><a href="#" class="text-white">Careers</a></li>
+                    <li><a href="https://ess.ads-nyanza.org/login" class="text-white">Staff Portal</a></li>
+                    <li><a href="#" class="text-white">Donate</a></li>
+                </ul>
+                <h6 class="font-weight-bold mt-4">Subscribe to Our Newsletter</h6>
+                <form action="mailto:ads@ads-nyanza.org" method="POST" enctype="multipart/form-data" class="form-inline">
+                    <div class="input-group w-100">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-light text-primary" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        
+            <div class="container text-center">
+                <p class="mb-0">&copy; <span id="currentYear"></span> ADS Nyanza. All Rights Reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+            </div>
+
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #28a745;
+        color: white;
+    }
+
+    footer h5 {
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    footer h6 {
+        margin-top: 10px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #d4edda;
+    }
+
+    .footer-bottom {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
