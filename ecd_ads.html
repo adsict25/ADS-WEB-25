@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of your website">
+    <meta name="keywords" content="keywords, for, your, website">
+    <title>ADS Nyanza - ECD-Programme</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* Custom Navbar Styles */
+        .navbar-custom {
+            background-color: #004080; /* ADS Nyanza Primary Color */
+            padding: 3px 10px; /* Reduced padding */
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px; /* Reduced padding */
+            transition: background-color 0.3s ease;
+            color: white; /* White text color */
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            background-color: hwb(130 7% 31%); /* Highlight color */
+            border-radius: 5px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 10px; /* Reduced padding */
+            background-color: #f8f9fa; /* Light background color */
+            height: 60px; /* Reduced height */
+            align-items: center;
+        }
+
+        .logo img {
+            height: 120px; /* Reduced height */
+            width: auto;
+            filter: brightness(1.2); /* Make the logo clearer */
+        }
+
+        /* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            justify-content: flex-end; /* Align icons to the right */
+            gap: 10px; /* Reduced space between icons */
+            padding: 3px 10px; /* Reduced padding */
+            background-color: #f8f9fa; /* Light background color */
+            height: 40px; /* Reduced height */
+            align-items: center;
+        }
+
+        .social-icons i {
+            font-size: 30px; /* Reduced icon size */
+            color: #004080; /* Match the primary color */
+        }
+
+        /* Celebration Text Styling */
+        .celebration-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px; /* Reduced padding */
+            background-color: #f8f9fa; /* Light background color */
+            font-size: 45px; /* Increased font size */
+            font-weight: bold;
+            color: #004080; /* Match the primary color */
+            font-family: 'Dancing Script', cursive; /* Fancy font */
+            text-shadow: 2px 2px 4px #aaa;
+            animation: celebration 1s infinite alternate;
+            text-align: center;
+            margin-top: -10px; /* Adjust position to almost touch the navbar */
+        }
+
+        @keyframes celebration {
+            0% { color: #004080; }
+            100% { color: #ff8000; }
+        }
+
+        /* Second Navbar Styles */
+        .navbar-secondary {
+            background-color: #004080; /* Match the primary color */
+            padding: 3px 10px; /* Reduced padding */
+            justify-content: center; /* Center align the navbar */
+            width: fit-content; /* Fit content width */
+            margin: 0 auto; /* Center align */
+            border-radius: 15px; /* Curved edges */
+            position: fixed; /* Make the navbar fixed */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it stays above other content */
+            width: 100%; /* Full width */
+        }
+
+        .navbar-secondary .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px; /* Reduced padding */
+            transition: background-color 0.3s ease;
+            color: white; /* White text color */
+        }
+
+        .navbar-secondary .navbar-nav .nav-link:hover {
+            background-color: hsl(146, 68%, 47%); /* Highlight color */
+            border-radius: 5px;
+        }
+
+        /* Additional Navbar Styles */
+        .navbar-half {
+            background-color: hsl(121, 84%, 34%); /* Match the primary color */
+            padding: 3px 10px; /* Reduced padding */
+            justify-content: center; /* Center align the navbar */
+            width: 50%; /* Half width */
+            margin: 20px auto; /* Center align with margin */
+            border-radius: 15px; /* Curved edges */
+        }
+
+        .navbar-half .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px; /* Reduced padding */
+            transition: background-color 0.3s ease;
+            color: white; /* White text color */
+        }
+
+        .navbar-half .navbar-nav .nav-link:hover {
+            background-color: hsl(120, 100%, 50%); /* Highlight color */
+            border-radius: 5px;
+        }
+
+        /* Photo Carousel Styling */
+        .carousel-item img {
+            height: 450px; /* Reduced height */
+            object-fit: cover; /* Ensure the image covers the area */
+        }
+
+        /* Additional Content Styling */
+        .content {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+    <!-- Top Navigation Bar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid">
+            <!-- Left Navigation Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="media_ads.html">Periodics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="involve.html">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ess.ads-nyanza.org/login">Staff Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Social Media Icons placed below the Navbar -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank">
+            <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://twitter.com/Ads_Nyanza" target="_blank">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/+254 726947044" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="mailto:ads@ads-nyanza.org" target="_blank">
+            <i class="bi bi-envelope-at-fill"></i>
+        </a>
+    </div>
+
+    <!-- Logo placed below the Social Media Icons -->
+    <div class="logo">
+        <img src="images/ads.png" alt="Logo">
+    </div>
+
+    <!-- ECD Project Text placed below the Logo -->
+    <div class="celebration-text" style="animation: none; font-size: 35px;">
+        Early Childhood Development
+        <p>Strengthening Primary Caregivers, Fathers, and Families so that Young Children Thrive and Reach Their Full Developmental Potential</p>
+        </div>
+
+    <!-- Combined Navbar placed below the Mission Section -->
+    <nav class="navbar navbar-expand-lg navbar-half justify-content-center">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHalf" aria-controls="navbarHalf" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarHalf">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="global_fund.html">Global Fund</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="ecd_ads.html">ECD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="icrp_ads.html">ICRP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="pesp_ads.html">PESP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="emergency_ads.html">Emergency Response</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="wkpi_ads.html">WKPI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Placeholder Section -->
+    <section class="image-placeholder py-5" style="margin-top: -50px; padding: 0;">
+        <div class="container-fluid p-0">
+            <img src="images/ecd_moraa.jpg" class="img-fluid w-100" alt="Placeholder Image" style="height: 700px; object-fit: cover;">
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <!-- Program Overview Section -->
+    <section class="program-section py-5" id="programDetails" style="margin-top: -50px;">
+        <div class="container">
+            <h3 class="text-center mb-4">Program Overview</h3>
+            <p class="text-center">Our Early Childhood Development (ECD) program focuses on empowering primary caregivers and communities to provide nurturing care, enhance child development, and promote well-being for children aged 0-3 years through holistic support and collaborative initiatives.</p>
+            <div class="text-center">
+                <!--<a href="ecd.html" class="btn btn-primary mt-3">Learn More</a>-->
+            </div>
+        </div>
+    </section>
+    
+   
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    /* General Styling */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .newspaper-container {
+        max-width: 900px;
+        margin: auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .newspaper-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .date {
+        font-size: 1.2rem;
+        color: #7f8c8d;
+        margin-bottom: 20px;
+    }
+
+    .article {
+        padding-bottom: 30px;
+        border-bottom: 2px solid #ecf0f1;
+    }
+
+    .article h2 {
+        font-size: 2rem;
+        color: #2980b9;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .blockquote {
+        background-color: #ecf0f1;
+        border-left: 5px solid #2980b9;
+        padding: 20px;
+        font-style: italic;
+        margin: 20px 0;
+        font-size: 1.1rem;
+    }
+
+    .blockquote-footer {
+        font-size: 1rem;
+        color: #2980b9;
+    }
+
+    .article-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .article-img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Modal Styling */
+    #imageModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+    }
+
+    #modalImage {
+        width: 80%;
+        height: auto;
+        margin: 50px auto;
+        display: block;
+        max-width: 100%;
+    }
+
+    #closeModal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #closeModal:hover {
+        color: #ecf0f1;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .newspaper-title {
+            font-size: 2rem;
+        }
+
+        .article h2 {
+            font-size: 1.5rem;
+        }
+
+        .blockquote {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<div class="container newspaper-container py-5">
+    <!-- Header -->
+    <header class="text-center mb-5">
+        <h1 class="newspaper-title">ECD Chronicle</h1>
+        <p class="lead">Bringing Stories of Change & Inspiration</p>
+        <p class="date">Friday, January 31, 2025</p>
+    </header>
+
+    <!-- First Story: Photo on Left, Content on Right -->
+    <div class="row article mb-5 align-items-center">
+        <div class="col-md-6">
+            <img src="images/ecd_elizabeth.jpg" class="img-fluid article-img" alt="Elizabeth Moraa Engaging with a Child">
+        </div>
+        <div class="col-md-6">
+            <h2>A Teen Caregiver’s Journey in Early Childhood Development Training</h2>
+            <p>In the serene village of Homa Bay, 17-year-old Elizabeth Moraa is gaining valuable knowledge in Early Childhood Development (ECD) to better support the children in her care.</p>
+            <blockquote class="blockquote">
+                <p>“Every morning, I wake up knowing that I’m gaining the skills to make a difference in a child’s life. These kids deserve the best, and I’m learning how to give them that.”</p>
+                <footer class="blockquote-footer">Elizabeth Moraa</footer>
+            </blockquote>
+            <p>Currently undergoing training, Elizabeth is learning how to engage children with interactive activities that promote their proper development. Her dedication has made her an example for many parents, highlighting the importance of investing in ECD for young children.</p>
+        </div>
+    </div>
+
+    <!-- Second Story: Photo on Right, Content on Left -->
+    <div class="row article mb-5 align-items-center">
+        <div class="col-md-6 order-md-2">
+            <img src="images/ecd_evelyne1.jpg" class="img-fluid article-img mb-3" alt="Evelyne Atieno with her Vegetable Garden">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h2>Evelyne Atieno: A Mother’s Love and a Green Thumb</h2>
+            <p>Balancing the roles of mother, caregiver, and entrepreneur, Evelyne Atieno has turned a small vegetable garden into a thriving source of food security and income for her family.</p>
+            <blockquote class="blockquote">
+                <p>“I wanted to take care of my children and provide for them at the same time. Vegetable planting has become a source of both income and nourishment for us.”</p>
+                <footer class="blockquote-footer">Evelyne Atieno</footer>
+            </blockquote>
+            <p>Through her garden, Evelyne not only ensures healthy meals for her family but also teaches young children about food sustainability. Her story is a beacon of hope for caregivers looking to blend innovation with nurturing.</p>
+            <img src="images/everlyne Atieno (jera siaya).jpeg" class="img-fluid article-img mt-3" alt="Evelyne Atieno working on her farm">
+        </div>
+    </div>
+
+    <!-- Local Impact Section -->
+    <div class="mt-5">
+        <h3>Local Impact, Global Lessons</h3>
+        <p>The stories of Elizabeth and Evelyne highlight the resilience and ingenuity of caregivers in rural communities. Whether through education or sustainable agriculture, they are shaping the future of Homa Bay, one child at a time.</p>
+    </div>
+</div>
+
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+    <span id="closeModal" class="close">&times;</span>
+    <img id="modalImage" src="" alt="Zoomed Image">
+</div>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let modal = document.getElementById("imageModal");
+        let modalImg = document.getElementById("modalImage");
+        let closeBtn = document.getElementById("closeModal");
+
+        document.querySelectorAll(".article-img").forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+
+    
+    
+              
+            <script>
+                // Automatically update the year in the footer
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementById("currentYear").textContent = new Date().getFullYear();
+                });
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        
+    
+            <section id="impact-timeline" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">ADS Impact on Child Development Milestones</h2>
+            
+                    <div class="timeline">
+                        <!-- 0-12 Months -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-primary text-white">0-12M</div>
+                            <div class="timeline-content">
+                                <h5>Nutrition and Parental Guidance</h5>
+                                <p>ADS provided nutritional supplements and training for caregivers, ensuring proper feeding practices during infancy.</p>
+                                <a href="#" class="btn btn-primary btn-sm mt-2">Read More</a>
+                            </div>
+                        </div>
+            
+                        <!-- 12-24 Months -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-success text-white">12-24M</div>
+                            <div class="timeline-content">
+                                <h5>Early Stimulation Activities</h5>
+                                <p>Intervention programs focused on interactive play and speech development, helping children reach key cognitive milestones.</p>
+                                <a href="#" class="btn btn-success btn-sm mt-2">Read More</a>
+                            </div>
+                        </div>
+            
+                        <!-- 24-36 Months -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon bg-warning text-white">24-36M</div>
+                            <div class="timeline-content">
+                                <h5>Pre-School Readiness</h5>
+                                <p>ADS programs supported motor skill development and emotional growth, preparing children for early learning environments.</p>
+                                <a href="#" class="btn btn-warning btn-sm mt-2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CSS -->
+            <style>
+                #impact-timeline {
+                    background-color: #f7f7f7;
+                }
+            
+                .timeline {
+                    position: relative;
+                    padding: 20px 0;
+                }
+            
+                .timeline-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    transition: all 0.3s ease-in-out;
+                }
+            
+                .timeline-item:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                }
+            
+                .timeline-icon {
+                    width: 60px; /* Increased size */
+                    height: 60px; /* Increased size */
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px; /* Adjusted font size */
+                    position: absolute;
+                    left: -30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    text-align: center;
+                    line-height: 1.2;
+                    padding: 5px;
+                }
+            
+                .timeline-content {
+                    padding-left: 80px; /* Adjusted for new circle size */
+                    background-color: white;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                    padding: 20px;
+                    width: 100%;
+                }
+            
+                .timeline-item h5 {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #333;
+                }
+            
+                .timeline-item p {
+                    font-size: 1rem;
+                    color: #555;
+                }
+            
+                .timeline-item .btn {
+                    font-size: 0.9rem;
+                }
+            
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                    .timeline-item {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+            
+                    .timeline-icon {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        margin-bottom: 15px;
+                    }
+            
+                    .timeline-content {
+                        padding-left: 0;
+                    }
+                }
+            </style>
+            
+            
+    
+           <!-- Video Section -->
+<div class="video-section text-center mt-5">
+    <h3 class="mb-4 text-primary font-weight-bold">Watch Our Impact Story</h3>
+    <p class="mb-4 text-muted">See the stories of transformation and empowerment in action. Watch how ADS is making a difference in child development.</p>
+    
+    <!-- Video Embed with Hover Effect -->
+    <div class="video-container position-relative">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/your-video-id" title="ADS Impact Video" allowfullscreen class="video-iframe"></iframe>
+        </div>
+
+        <!-- Play Icon on Hover -->
+        <div class="play-icon-overlay position-absolute top-50 start-50 translate-middle">
+            <i class="fas fa-play-circle text-white" style="font-size: 60px;"></i>
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    .video-section h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1a73e8;
+    }
+
+    .video-section p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Video Container Enhancements */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .video-iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .video-container:hover .video-iframe {
+        transform: scale(1.05);
+    }
+
+    /* Play Icon Overlay */
+    .play-icon-overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .video-container:hover .play-icon-overlay {
+        opacity: 1;
+    }
+
+    .video-container:hover .fas.fa-play-circle {
+        transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .video-section h3 {
+            font-size: 1.5rem;
+        }
+
+        .video-section p {
+            font-size: 1rem;
+        }
+    }
+</style>
+<p>
+
+
+
+    
+</p>
+<!-- Add FontAwesome for Play Icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</style>
+<!-- Footer Section -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<footer>
+    <div class="container py-5 text-white">
+        <!-- Top Section -->
+        <div class="row">
+            <!-- ADS Nyanza Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">ADS Nyanza</h5>
+                <p>St. Peters Church Milimani, Along Omolo Agar Road, Kisumu, Kenya</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+254 726947044</p>
+                <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:ads@ads-nyanza.org" class="text-white">ads@ads-nyanza.org</a></p>
+
+                <h6 class="font-weight-bold">Social Media</h6>
+                <div class="d-flex justify-content-start">
+                    <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank" class="text-white me-2">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank" class="text-white me-2">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/Ads_Nyanza" target="_blank" class="text-white me-2">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank" class="text-white me-2">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/+254 726947044"  target="_blank" class="text-white me-2">
+                        <i class="bi bi-whatsapp"></i>               
+                             </a>
+                </div>
+            </div>
+
+            <!-- Our Work Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">Our Work</h5>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="ecd_ads.html" class="text-white">Early Childhood Development</a></li>
+                    <li><a href="global_fund.html" class="text-white">Global Fund</a></li>
+                    <li><a href="icrp_ads.html" class="text-white">Intergrated Climate Resilence Project</a></li>
+                    <li><a href="wkpi_ads.html" class="text-white">West Kenya Peace Initiative</a></li>
+                    <li><a href="emergency_ads.html" class="text-white">Emergency Responce</a></li>
+                    <li><a href="pesp_ads.html" class="text-white">PESP</a></li>
+                </ul>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">About Us</h5>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="about.html" target="_blank" class="text-white">Our Leadership</a></li>
+                    <li><a href="involve.html" target="_blank" class="text-white">Get Involved</a></li>
+                    <li><a href="media_ads.html" target="_blank" class="text-white">News</a></li>
+                </ul>
+                <h6 class="font-weight-bold">Our Guiding Policies</h6>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS HR Policy</a></li>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS PSEAH Policy</a></li>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS ICT Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Access Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">Quick Access</h5>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="#" class="text-white">Careers</a></li>
+                    <li><a href="https://ess.ads-nyanza.org/login" class="text-white">Staff Portal</a></li>
+                    <li><a href="#" class="text-white">Donate</a></li>
+                </ul>
+                <h6 class="font-weight-bold mt-4">Subscribe to Our Newsletter</h6>
+                <form action="mailto:ads@ads-nyanza.org" method="POST" enctype="multipart/form-data" class="form-inline">
+                    <div class="input-group w-100">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-light text-primary" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        
+            <div class="container text-center">
+                <p class="mb-0">&copy; <span id="currentYear"></span> ADS Nyanza. All Rights Reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+            </div>
+
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #28a745;
+        color: white;
+    }
+
+    footer h5 {
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    footer h6 {
+        margin-top: 10px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #d4edda;
+    }
+
+    .footer-bottom {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<!-- 
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="24px" height="24px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+Loader -->
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    
+    <script>
+        console.log('Navbar, header, and social media icons loaded successfully.');
+    </script>
+
+</body>
+</html>
+    
