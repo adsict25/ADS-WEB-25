@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of your website">
+    <meta name="keywords" content="keywords, for, your, website">
+    <title>ADS Nyanza - Peoples Empowerment & Sustainability Project</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* Custom Navbar Styles */
+        .navbar-custom {
+            background-color: #004080; /* ADS Nyanza Primary Color */
+            padding: 3px 10px; /* Reduced padding */
+        }
+
+        .no-animation {
+            animation: none;
+        }
+
+        .large-font {
+            font-size: 35px;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px; /* Reduced padding */
+            transition: background-color 0.3s ease;
+            color: white; /* White text color */
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            background-color: hwb(130 7% 31%); /* Highlight color */
+            border-radius: 5px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 10px; /* Reduced padding */
+            background-color: #f8f9fa; /* Light background color */
+            height: 60px; /* Reduced height */
+            align-items: center;
+        }
+
+        .logo img {
+            height: 120px; /* Reduced height */
+            width: auto;
+            filter: brightness(1.2); /* Make the logo clearer */
+        }
+
+        /* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            justify-content: flex-end; /* Align icons to the right */
+            gap: 10px; /* Reduced space between icons */
+            padding: 3px 10px; /* Reduced padding */
+            background-color: #f8f9fa; /* Light background color */
+            height: 40px; /* Reduced height */
+            align-items: center;
+        }
+
+        .social-icons i {
+            font-size: 30px; /* Reduced icon size */
+            color: #004080; /* Match the primary color */
+        }
+
+        /* Celebration Text Styling */
+        .celebration-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px; /* Reduced padding */
+            background-color: #f8f9fa; /* Light background color */
+            font-size: 45px; /* Increased font size */
+            font-weight: bold;
+            color: #004080; /* Match the primary color */
+            font-family: 'Dancing Script', cursive; /* Fancy font */
+            text-shadow: 2px 2px 4px #aaa;
+            animation: celebration 1s infinite alternate;
+            text-align: center;
+            margin-top: -10px; /* Adjust position to almost touch the navbar */
+        }
+
+        @keyframes celebration {
+            0% { color: #004080; }
+            100% { color: #ff8000; }
+        }
+
+        /* Second Navbar Styles */
+        .navbar-secondary {
+            background-color: #004080; /* Match the primary color */
+            padding: 3px 10px; /* Reduced padding */
+            justify-content: center; /* Center align the navbar */
+            width: fit-content; /* Fit content width */
+            margin: 0 auto; /* Center align */
+            border-radius: 15px; /* Curved edges */
+            position: fixed; /* Make the navbar fixed */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it stays above other content */
+            width: 100%; /* Full width */
+        }
+
+        .navbar-secondary .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px; /* Reduced padding */
+            transition: background-color 0.3s ease;
+            color: white; /* White text color */
+        }
+
+        .navbar-secondary .navbar-nav .nav-link:hover {
+            background-color: hsl(146, 68%, 47%); /* Highlight color */
+            border-radius: 5px;
+        }
+
+        /* Additional Navbar Styles */
+        .navbar-half {
+            background-color: hsl(121, 84%, 34%); /* Match the primary color */
+            padding: 3px 10px; /* Reduced padding */
+            justify-content: center; /* Center align the navbar */
+            width: 50%; /* Half width */
+            margin: 20px auto; /* Center align with margin */
+            border-radius: 15px; /* Curved edges */
+        }
+
+        .navbar-half .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px; /* Reduced padding */
+            transition: background-color 0.3s ease;
+            color: white; /* White text color */
+        }
+
+        .navbar-half .navbar-nav .nav-link:hover {
+            background-color: hsl(120, 100%, 50%); /* Highlight color */
+            border-radius: 5px;
+        }
+
+        /* Photo Carousel Styling */
+        .carousel-item img {
+            height: 450px; /* Reduced height */
+            object-fit: cover; /* Ensure the image covers the area */
+        }
+
+        /* Additional Content Styling */
+        .content {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+    <!-- Top Navigation Bar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid">
+            <!-- Left Navigation Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="media_ads.html">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="involve.html">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ess.ads-nyanza.org/login">Staff Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Social Media Icons placed below the Navbar -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank">
+            <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://twitter.com/Ads_Nyanza" target="_blank">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/+254 726947044" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="mailto:ads@ads-nyanza.org" target="_blank">
+            <i class="bi bi-envelope-at-fill"></i>
+        </a>
+    </div>
+
+    <!-- Logo placed below the Social Media Icons -->
+    <div class="logo">
+        <img src="images/ads.png" alt="Logo">
+    </div>
+
+    <!-- PESP Project Text placed below the Logo -->
+    <div class="celebration-text no-animation large-font">
+        <span style="font-size: 45px; font-family: 'Times New Roman', serif;">Peoples Empowerment & Sustainability Project</span>
+        <p style="font-size: 25px; font-family: Arial, sans-serif;">Contribute to improved sustainable livelihoods of poor communities in Siaya, Kisumu, Homa Bay, Migori, and Nyamira Counties through the Peoples Empowerment & Sustainability Project</p>
+    </div>
+
+    <!-- Combined Navbar placed below the Mission Section -->
+    <nav class="navbar navbar-expand-lg navbar-half justify-content-center">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHalf" aria-controls="navbarHalf" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarHalf">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="global_fund.html">Global Fund</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="ecd_ads.html">MtM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="crp_ads.html">CRP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="pesp_ads.html">PESPS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="emergency_ads.html">Emergency Response</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="wkpi_ads.html">WKPI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="secd_ads.html">S-ECD</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Placeholder Section -->
+    <section class="image-placeholder py-5" style="margin-top: -50px; padding: 0;">
+        <div class="container-fluid p-0">
+            <img src="images/peps_3.jpg" class="img-fluid w-100" alt="Placeholder Image" style="height: 700px; object-fit: cover;">
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <!-- Program Overview Section -->
+    <section class="program-section py-5" id="programDetails" style="margin-top: -50px;">
+        <div class="container">
+            <h3 class="text-center mb-4">Program Overview</h3>
+            <p class="text-center">
+                The Peoples Empowerment and Sustainability Project (PESP) aims to enhance the livelihoods of vulnerable households in Siaya, Kisumu, Homa Bay, Migori, and Nyamira counties. By empowering communities through capacity building, promoting financial resilience via Savings With Education (SWE) groups, improving agricultural productivity, and ensuring access to quality healthcare, the project seeks to achieve sustainable income growth and better health outcomes by December 2024.
+            </p>
+            <div class="text-center">
+                <!--<a href="icrp_ads.html" class="btn btn-primary mt-3">Learn More</a>-->
+            </div>
+        </div>
+        </section>
+        
+<!--Content-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <section>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f8f9fa;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+    
+            .news-article {
+                background-color: white;
+                border-radius: 10px;
+                margin-top: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+    
+            .news-article h1 {
+                font-size: 2.5rem;
+                color: #343a40;
+                margin-bottom: 15px;
+                border-bottom: 3px solid #28a745;
+                padding-bottom: 10px;
+            }
+    
+            .news-article p {
+                font-size: 1.1rem;
+                color: #495057;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+    
+            .news-article h3 {
+                font-size: 1.5rem;
+                color: #28a745;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+    
+            .news-article ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+    
+            .news-article ul li {
+                font-size: 1.1rem;
+                color: #495057;
+                margin-bottom: 10px;
+            }
+    
+            .news-article ul li strong {
+                color: #343a40;
+            }
+    
+            .news-article .section-footer {
+                font-size: 1rem;
+                color: #6c757d;
+                margin-top: 30px;
+                text-align: center;
+            }
+        </style>
+    
+        <div class="container my-4">
+            <article class="news-article">
+                <h1>A New Dawn for Agriculture: Empowering Farmers with Digital Solutions</h1>
+                <p>
+                    Traditional farming methods in many communities have long struggled with limited access to resources, information, and support. This gap has often left smallholder farmers without timely advice, struggling to meet market demands. However, through the innovative *Peoples Empowerment for Sustainability Project (PESP)* and *Digital Agriculture Extension (DAE)*, ADS-Nyanza is transforming the agricultural landscape by providing farmers with digital tools and the support they need to thrive in the modern world.
+                </p>
+    
+                <h3>How PESP and Digital Agriculture Extension (DAE) Are Helping</h3>
+                <p>
+                    The *Peoples Empowerment for Sustainability Project (PESP)* is focused on improving the livelihoods of rural farmers by integrating technology into agricultural practices. By leveraging mobile applications, internet-based platforms, and digital advisory services, PESP is ensuring that farmers receive personalized guidance, market trends, and real-time information on weather and crop management. These efforts are paving the way for more resilient farming systems that can adapt to changing climates and market conditions.
+                </p>
+    
+                <h3>Key Benefits of DAE and PESP for the Community</h3>
+                <ul>
+                    <li><strong>Increased Access to Expert Advice:</strong> Farmers now receive expert advice on pest control, irrigation, and crop management through their smartphones, empowering them to make informed decisions.</li>
+                    <li><strong>Improved Market Access:</strong> With digital tools, farmers can connect to markets, find buyers, and negotiate better prices, leading to increased profits and financial stability.</li>
+                    <li><strong>Enhanced Agricultural Productivity:</strong> Farmers using digital platforms report higher yields due to better crop management practices, resulting in more sustainable and profitable farming.</li>
+                    <li><strong>Digital Literacy and Youth Empowerment:</strong> PESP also focuses on building digital literacy among young people in rural areas, encouraging them to explore agribusiness opportunities, contributing to a new generation of digital-savvy farmers.</li>
+                </ul>
+    
+                <h3>Success Stories from the Community</h3>
+                <p>
+                    *PESP* has already seen remarkable success in various communities. One such success story is the increase in food production and income among farmers in Kisumu County, where the introduction of digital advisory services led to a 45% increase in crop yields and a 20% rise in incomes. Additionally, youth empowerment programs have helped young entrepreneurs establish agribusinesses, creating new income streams and reducing the urban migration of rural youth.
+                </p>
+    
+               
+            </article>
+        </div>
+    </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+
+
+            <!-- Footer Section -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<footer>
+    <div class="container py-5 text-white">
+        <!-- Top Section -->
+        <div class="row">
+            <!-- ADS Nyanza Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">ADS Nyanza</h5>
+                <p>St. Peters Church Milimani, Along Omolo Agar Road, Kisumu, Kenya</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+254 726947044</p>
+                <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:ads@ads-nyanza.org" class="text-white">ads@ads-nyanza.org</a></p>
+
+                <h6 class="font-weight-bold">Social Media</h6>
+                <div class="d-flex justify-content-start">
+                    <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank" class="text-white me-2">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank" class="text-white me-2">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/Ads_Nyanza" target="_blank" class="text-white me-2">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank" class="text-white me-2">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/+254 726947044"  target="_blank" class="text-white me-2">
+                        <i class="bi bi-whatsapp"></i>               
+                             </a>
+                </div>
+            </div>
+
+            <!-- Our Work Section -->
+            <!-- Our Work Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">Our Work</h5>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                <li><a href="ecd_ads.html" class="text-white">Moments that Matter</a></li>
+                <li><a href="global_fund.html" class="text-white">Global Fund</a></li>
+                <li><a href="crp_ads.html" class="text-white">Climate Resilience Project</a></li>
+                <li><a href="wkpi_ads.html" class="text-white">West Kenya Peace Initiative</a></li>
+                <li><a href="emergency.html" class="text-white">Emergency Response</a></li>
+                <li><a href="pesp_ads.html" class="text-white">PESP</a></li>
+                <li><a href="secd_ads.html" class="text-white">S-ECD</a></li>
+            </ul>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">About Us</h5>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="about.html" target="_blank" class="text-white">Our Leadership</a></li>
+                    <li><a href="involve.html" target="_blank" class="text-white">Get Involved</a></li>
+                    <li><a href="media_ads.html" target="_blank" class="text-white">News</a></li>
+                </ul>
+                <!--<h6 class="font-weight-bold">Our Guiding Policies</h6>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS HR Policy</a></li>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS PSEAH Policy</a></li>
+                    <li><a href="files/programs_man.pdf" target="_blank" class="text-white">ADS ICT Policy</a></li>
+                </ul>-->
+            </div>
+
+            <!-- Quick Access Section -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="text-uppercase font-weight-bold mb-3">Quick Access</h5>
+                <ul class="list-unstyled custom-list" style="font-size: 1.1rem;"></ul>
+                    <li><a href="#" class="text-white">Careers</a></li>
+                    <li><a href="https://ess.ads-nyanza.org/login" class="text-white">Staff Portal</a></li>
+                    <li><a href="#" class="text-white">Donate</a></li>
+                </ul>
+                <h6 class="font-weight-bold mt-4">Subscribe to Our Newsletter</h6>
+                <form action="mailto:ads@ads-nyanza.org" method="POST" enctype="multipart/form-data" class="form-inline">
+                    <div class="input-group w-100">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-light text-primary" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        
+            <div class="container text-center">
+                <p class="mb-0">&copy; <span id="currentYear"></span> ADS Nyanza. All Rights Reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+            </div>
+
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #28a745;
+        color: white;
+    }
+
+    footer h5 {
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    footer h6 {
+        margin-top: 10px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #d4edda;
+    }
+
+    .footer-bottom {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<!-- 
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="24px" height="24px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+Loader -->
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    
+    <script>
+        console.log('Navbar, header, and social media icons loaded successfully.');
+    </script>
+
+</body>
+</html>
+

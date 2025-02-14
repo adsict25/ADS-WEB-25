@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of your website">
+    <meta name="keywords" content="keywords, for, your, website">
+    <title>ADS Nyanza - Our Programs</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom Navbar Styles */
+        .navbar-custom {
+            background-color: hsl(137, 93%, 42%);
+            padding: 3px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            background-color: #ff8000;
+            border-radius: 5px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 10px;
+            background-color: #f8f9fa;
+            height: 80px;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 140px;
+            width: auto;
+            filter: brightness(1.2);
+        }
+
+        /* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 3px 10px;
+            background-color: #f8f9fa;
+            height: 40px;
+            align-items: center;
+        }
+
+        .social-icons i {
+            font-size: 20px;
+            color: inherit;
+        }
+
+        /* Celebration Text Styling */
+        .celebration-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: #f8f9fa;
+            font-size: 45px;
+            font-weight: bold;
+            color: #004080;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 2px 2px 4px #aaa;
+            animation: celebration 1s infinite alternate;
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        @keyframes celebration {
+            0% { color: #004080; }
+            100% { color: #ff8000; }
+        }
+
+        /* Second Navbar Styles */
+        .navbar-secondary {
+            background-color: hwb(195 4% 33%);
+            padding: 3px 10px;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        .navbar-secondary .navbar-nav .nav-link {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 10px;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+
+        .navbar-secondary .navbar-nav .nav-link:hover {
+            background-color: #ff8000;
+            border-radius: 5px;
+        }
+
+        /* Photo Carousel Styling */
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        /* Additional Content Styling */
+        .content {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .carousel-cause .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-cause .item img {
+            border-radius: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-cause .item img:hover {
+            transform: scale(1.1);
+        }
+
+        .ftco-gallery .gallery {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ftco-gallery .gallery:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .ftco-gallery .gallery .icon {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ftco-gallery .gallery:hover .icon {
+            opacity: 1;
+        }
+
+        .ftco-gallery .gallery .icon span {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .ftco-gallery .gallery .icon {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #d4edda;
+        }
+
+        .social-icons a {
+            font-size: 10px;
+            width: 20px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%;
+        }
+
+        .social-icons a:hover {
+            color: #28a745;
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .footer-top {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d4edda;
+        }
+
+        .footer-top h5 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-top p, .footer-top ul {
+            margin-bottom: 10px;
+        }
+
+        .footer-top ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-top ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-top ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-top ul li a:hover {
+            color: #d4edda;
+        }
+
+        /* Custom List Item Styles */
+        .custom-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .custom-list li::before {
+            content: "*";
+            position: absolute;
+            left: 0;
+            color: #d4edda;
+            font-weight: bold;
+        }
+
+        /* Cookie Consent Styles */
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 10000;
+        }
+
+        .cookie-consent button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .cookie-consent button.reject {
+            background-color: #dc3545;
+        }
+
+        .cookie-consent button:hover {
+            opacity: 0.8;
+        }
+
+        /* Small screens (e.g., mobile) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%; /* Make container full-width */
+    }
+    .column {
+        width: 100%; /* Stack columns */
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 90%;
+    }
+    .column {
+        width: 50%; /* Two columns */
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        width: 80%;
+    }
+    .column {
+        width: 33.33%; /* Three columns */
+    }
+}
+    </style>
+</head>
+<body>
+   <!-- Main Navigation Container -->
+    <!-- Top Navigation Bar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid">
+            <!-- Toggle Button with Icon -->
+            <button class="navbar-toggler" type="button" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMainNavbar()">
+                <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ecd_ads.html">Moments that Matter (MtM)</a></li>
+                            <li><a class="dropdown-item" href="crp_ads.html">Climate Resilience Project (CRP)</a></li>
+                            <li><a class="dropdown-item" href="global_fund.html">Global Fund (GF)</a></li>
+                            <li><a class="dropdown-item" href="secd_ads.html">Strengthening Early Childhood Development (S-ECD)</a></li>
+                            <li><a class="dropdown-item" href="wkpi_ads.html">West Kenya Peace Initiative (WKPI)</a></li>
+                            <li><a class="dropdown-item" href="emergency_ads.html">Emergency Response (ER)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Right Navigation Menu -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="involve.html">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ess.ads-nyanza.org/">Staff Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</nav>
+
+<!-- JavaScript for Toggling -->
+<script>
+    function toggleMainNavbar() {
+        var nav = document.getElementById("navbarNav");
+        nav.classList.toggle("show");
+    }
+</script>
+
+<!-- Include FontAwesome for the icon -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+    <!-- Social Media Icons placed below the Navbar -->
+    <div class="social-icons" style="font-size: 12px; gap: 8px;">
+        <a href="https://www.facebook.com/people/ADS-Nyanza/61557946673947/" target="_blank">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@ADS-NYANZA" target="_blank">
+            <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://twitter.com/Ads_Nyanza" target="_blank">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ads-nyanza-aa998b2b6/" target="_blank">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/+254726947044" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        </a>
+        <a href="mailto:ads@ads-nyanza.org" target="_blank">
+            <i class="bi bi-envelope"></i>
+        </a>
+    </div>
+
+    <!-- Logo placed below the Social Media Icons -->
+    <div class="logo">
+        <img src="images/ads.png" alt="Logo">
+    </div>
+
+    <!-- Celebration Text placed below the Logo -->
+    <div class="celebration-text">
+        Join Us in Celebrating
+        <p>Over 28 years for community Empowerment</p>
+    </div>
+
+    <style>
+        /* Adjustments for small screens */
+        @media (max-width: 767px) {
+            .social-icons i {
+                font-size: 20px; /* Resize social media icons */
+            }
+            .logo img {
+                height: 60px; /* Adjust logo size */
+            }
+            .celebration-text {
+                font-size: 24px; /* Adjust celebration text size */
+            }
+            .celebration-text p {
+                font-size: 16px; /* Adjust celebration subtext size */
+            }
+        }
+
+        /* Medium screens (e.g., tablets) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .social-icons i {
+                font-size: 25px; /* Resize social media icons */
+            }
+            .logo img {
+                height: 80px; /* Adjust logo size */
+            }
+            .celebration-text {
+                font-size: 30px; /* Adjust celebration text size */
+            }
+            .celebration-text p {
+                font-size: 20px; /* Adjust celebration subtext size */
+            }
+        }
+
+        /* Large screens (e.g., desktops) */
+        @media (min-width: 992px) {
+            .social-icons i {
+                font-size: 30px; /* Resize social media icons */
+            }
+            .logo img {
+                height: 100px; /* Adjust logo size */
+            }
+            .celebration-text {
+                font-size: 36px; /* Adjust celebration text size */
+            }
+            .celebration-text p {
+                font-size: 24px; /* Adjust celebration subtext size */
+            }
+        }
+    </style>
+
+<!-- Secondary Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-secondary">
+    <div class="container-fluid">
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" aria-controls="navbarSecondary" 
+            aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+            Feeds
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarSecondary">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="media_ads.html">Media</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="involve.html">Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="downloads_ads.html">Downloads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="location_ads.html">Location</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript for Toggle Function -->
+<script>
+    function toggleNavbar() {
+        var nav = document.getElementById("navbarSecondary");
+        nav.classList.toggle("show");
+    }
+</script>
+
+    <style>
+        /* Adjustments for small screens */
+        @media (max-width: 767px) {
+            .social-icons i {
+                font-size: 20px; /* Resize social media icons */
+            }
+            .navbar-custom .navbar-nav .nav-link {
+                font-size: 12px; /* Adjust font size for small screens */
+            }
+            .navbar-secondary .navbar-nav .nav-link {
+                font-size: 12px; /* Adjust font size for small screens */
+            }
+            .dropdown-menu {
+                font-size: 12px; /* Adjust dropdown menu font size for small screens */
+            }
+        }
+    </style>
+
+    <style>
+        /* Adjustments for small screens */
+        @media (max-width: 767px) {
+            .social-icons i {
+                font-size: 20px; /* Resize social media icons */
+            }
+            .navbar-custom .navbar-nav .nav-link {
+                font-size: 12px; /* Adjust font size for small screens */
+            }
+            .navbar-secondary .navbar-nav .nav-link {
+                font-size: 12px; /* Adjust font size for small screens */
+            }
+        }
+    </style>
+
+    <!-- Cookie Consent Pop-up -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our use of cookies. <a href="privacy-policy.html" style="color: #d4edda;">Learn more</a></p>
+        <button onclick="acceptCookies()">Accept</button>
+        <button class="reject" onclick="rejectCookies()">Reject</button>
+    </div>
+
+    <!-- Link to Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script>
+        console.log('Navbar, header, and social media icons loaded successfully.');
+
+        // Check if cookies are accepted
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieConsent').style.display = 'block';
+            }
+        }
+
+        // Accept cookies
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
+
+        // Reject cookies
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
+
+        // Check cookie consent on page load
+        window.onload = checkCookieConsent;
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .introduction {
+        background: linear-gradient(to right, hsl(121, 76%, 48%), #00c6ff);
+        color: white;
+        padding: 60px 20px;
+        border-radius: 10px;
+    }
+
+    .programs {
+        padding: 50px 20px;
+    }
+
+    .program-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .program-card {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 300px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .program-card:hover {
+        transform: scale(1.05);
+    }
+
+    /* Fullscreen Video */
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<!-- Introduction Section -->
+<section class="introduction">
+    <div class="container">
+        <h1>Our Programs</h1>
+        <p>ADS Nyanza is dedicated to creating sustainable change through strategic programs that address key social, environmental, and economic challenges. Our initiatives align with our mission to empower communities, foster resilience, and enhance well-being across various sectors.</p>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section class="programs">
+    <div class="container">
+        <h2>Explore Our Programs</h2>
+        <p>We implement tailored projects in early childhood development, climate resilience, emergency response, and community empowerment, ensuring lasting impact and sustainable solutions.</p>
+        
+
+           
+            <!-- Program Cards Section -->
+<!-- Program Cards Section -->
+<section class="program-section">
+    <div class="program-card">
+        <h3>Moments that Matter</h3>
+        <p>Providing essential support for young children through education, nutrition, and health programs.</p>
+        <a href="ecd_ads.html" target="_blank" class="learn-more-link">Explore</a>
+    </div>
+    <div class="program-card">
+        <h3>Climate Resilience Project</h3>
+        <p>Promoting sustainable practices and resilience strategies to mitigate climate change impacts.</p>
+        <a href="crp_ads.html" target="_blank" class="learn-more-link">Explore</a>
+    </div>
+    <div class="program-card">
+        <h3>Emergency Response</h3>
+        <p>Rapid response initiatives to assist communities affected by natural disasters and conflicts.</p>
+        <a href="emergency_ads.html" target="_blank" class="learn-more-link">Explore</a>
+    </div>
+
+    <!--<div class="program-card">
+        <h3>Peoples Empowerment for Sustainability Project (PESP)</h3>
+        <p>Enhancing agricultural sustainability through digital technology, capacity building, and community empowerment.</p>
+        <a href="pesp_ads.html" target="_blank" class="learn-more-link">Explore</a>
+    </div>-->
+
+    <div class="program-card">
+        <h3>West Kenya Peace Initiative (WKPI)</h3>
+        <p>Promoting peacebuilding, conflict resolution, and community cohesion through collaborative efforts in West Kenya.</p>
+        <a href="wkpi_ads.html" target="_blank" class="learn-more-link">Explore</a>
+    </div>
+    
+
+    <div class="program-card">
+        <h3>Global Fund</h3>
+        <p>Supporting health initiatives targeting HIV/AIDS, tuberculosis, and malaria prevention and treatment.</p>
+        <a href="global_fund.html" target="_blank" class="learn-more-link">Explore</a>
+    </div>
+
+    <div class="program-card">
+        <h3>Strengthening Early Childhood Development (S-ECD)</h3>
+        <p>Enhancing early childhood development through education, health, and nutrition programs.</p>
+        <a href="secd_ads.html" target="_blank" class="learn-more-link">Explore</a>
+</section>
+
+<!-- CSS for Styling -->
+<style>
+    .program-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 40px 20px;
+        background-color: #f8f8f8;
+    }
+
+    .program-card {
+        background: #fff;
+        padding: 20px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .program-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .program-card h3 {
+        color: #004080;
+        margin-bottom: 10px;
+    }
+
+    .program-card p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .link-section {
+        text-align: center;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .learn-more-link {
+        text-decoration: none;
+        font-size: 18px;
+        color: #004080;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: 2px solid #004080;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .learn-more-link:hover {
+        background-color: #004080;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .program-section {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .program-card {
+            width: 90%;
+        }
+    }
+</style>
+</div>
+</section>
+</body>
+</html>
